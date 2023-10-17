@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body>
+
+    <form action="hasil_form_pemesanan_barang.html">
+        <style type="text/css">
+
+            .img_dmg
+            {
+                float: left;
+            }
+    
+        </style>
+    
+        <img class="img_dmg" src="download (3).jpg" alt="">
+        
+        <table>
+            <tr>
+                <td>Title Name:</td>
+                <td>
+                    <input type="text" name="namaproduk">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Description:</td>
+                <td>
+                    <textarea name="Description" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+    
+            <tr>
+                 <td>Account Number:</td>
+                <td>
+                        <input type="text" name="accountnumber">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Bamk:</td>
+                <td>
+                    <select name='bank'>
+                        <option value='bca'>BCA</option>
+                        <option value='mandiri'>Mandiri</option>
+                        <option value='bcn'>BCN</option>
+                      </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Account Holder:</td>
+                <td>
+                    <input type="text" name="accountholder">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Transision:</td>
+               <td>
+                    <input type="number" name="ttransision">
+               </td>
+           </tr>
+    
+           <tr>
+                <td>
+                    <input type="checkbox" value="send to mobile phone"> Send to Mobile Phone
+                </td>
+            </tr>
+    
+            <tr>
+                <td>
+                    <input type="checkbox" value="send to email"> Send to Email
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Send to Mobile Phone:</td>
+                <td>
+                    <input type="text" name="send to mobile phone">
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Send to Email:</td>
+                <td>
+                    <input type="text" name="send to email">
+                </td>
+            </tr>
+            
+        <tr>
+            <button type="submit">Generate Nabr Link</button>
+        </tr>
+    
+        </table>
+        
+    </body>
+    </form>
+
+</html>
