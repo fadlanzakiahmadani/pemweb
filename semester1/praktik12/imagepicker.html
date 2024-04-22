@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select id="selectAnimal">
+        <option value="gorila.jpg" selected>Gorila</option>
+        <option value="Koala.jpeg">Koala</option>
+        <option value="macan tutul.jpeg">Macan Tutul</option>
+        <option value="orangutan.jpeg">Orangutan</option>
+        <option value="panda.jpg">Panda</option>
+    </select>
+    <br>
+    <br>
+    <img src="" id="image">
+
+    <script>
+        // tsngkap elemen yg dibutuhksn
+        const selectAnimal = document.getElementById("selectAnimal")
+        const image = document.getElementById("image")
+
+        //pangil fungsi chsngeImage ketika tag select berubah
+        selectAnimal.addEventListener("change", chamgeImage)
+
+        // fungsi untuk merubah source image
+        function chamgeImage () {
+        image.src = "img/" + selectAnimal.value    
+        }
+
+        // pangil fungsi
+        chamgeImage ()
+    </script>
+</body>
+
+</html>

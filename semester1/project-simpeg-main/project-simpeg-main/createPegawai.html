@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIMPEG | Form Employee</title>
+  <link rel="icon" type="image/x-icon" href="assets/dist/img/nf.ico">
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="assets/dist/img/nflogo.png" alt="NF Logo" height="50" width="60">
+  </div>
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+  
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="#" class="brand-link">
+      <img class="animation__shake" src="assets/dist/img/nflogo.jpg" alt="NF Logo" height="50" width="60">
+      <span class="brand-text font-weight-light">SIMPEG NF</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Fadlan Zaki Ahmadani</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+              with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="home.html" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-building"></i>
+              <p>
+                Company
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="employee.html" class="nav-link active">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Employee
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-user-clock"></i>
+              <p>
+                Time Attendence
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="overtime.html" class="nav-link ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Overtime
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" onclick="Logout()" class="nav-link ">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <span class="h4">Kelola Pegawai</span>
+            <ol class="breadcrumb ">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Create Pegawai</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- jquery validation -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Create Pegawai Baru</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="quickForm">
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Nama Pegawai :</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="nama" class="form-control" id="" placeholder="Input Nama Pegawai">
+                      </div>
+                      
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Tempat, Tgl Lahir :</label>
+                    <div class="col-sm-3">
+                    <input type="text" name="tempatLahir" class="form-control" id="" placeholder="Input Tempat Lahir">
+                    </div>
+                    <div class="col-sm-2">
+                      <input type="date" name="tanggalLahir" class="form-control" id="" placeholder="Input Tanggal Lahir">
+                      </div>
+                      
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-3 form-check-label"><b>Jenis Kelamin :</b></label>
+                    <div class="col-sm-1">
+                    <input type="radio" name="jk" class="form-check-input" id="">
+                    <label for="">L</label>
+                  </div>
+                    <div class="col-sm-1">
+                      <input type="radio" name="jk" class="form-check-input" id="">
+                      <label for="">P</label>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">NIK :</label>
+                    <div class="col-sm-5">
+                    <input type="number" name="nik" class="form-control" id="" placeholder="Input NIK">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Alamat :</label>
+                    <div class="col-sm-5">
+                      <textarea class="form-control" rows="3" placeholder="Input Alamat"></textarea>
+                    </div>
+                      
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Email :</label>
+                    <div class="col-sm-5">
+                    <input type="email" name="email" class="form-control" id="" placeholder="Input email">
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-label">Telepon/HP :</label>
+                    <div class="col-sm-5">
+                    <input type="number" name="telepon" class="form-control" id="" placeholder="Enter email">
+                      </div>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  <a href="#" class="btn btn-primary">Simpan</a>
+                  <a href="employee.html" class="btn btn-danger">Batal</a>
+
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-6">
+
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2024 <a href="#">SIMPEG</a>.</strong>
+    All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/dist/js/adminlte.js"></script>
+<script src="assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="assets/plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  $(function () {
+    $.validator.setDefaults({
+      submitHandler: function () {
+        alert( "Form successful submitted!" );
+      }
+    });
+    $('#quickForm').validate({
+      rules: {
+        nama: {
+          required: true,
+          nama: true,
+        },
+        tempatLahir: {
+          required: true,
+          tempatLahir: true,
+        },
+        tanggalLahir: {
+          required: true,
+          tanggalLahir: true,
+        },
+        jk: {
+          required: true,
+          jk: true,
+        },
+        nik: {
+          required: true,
+          nik: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        telepon: {
+          required: true,
+        },
+        terms: {
+          required: true
+        },
+      },
+      messages: {
+        nama: {
+          required: "Nama harus diisi",
+          nama: "Please enter a valid name"
+        },
+        tempatLahir: {
+          required: "Tempat lahir harus diisi",
+          nama: "Please enter a valid place"
+        },
+        tanggalLahir: {
+          required: "Tanggal lahir harus diisi",
+          nama: "Please enter a valid date"
+        },
+        jk: {
+          required: "Jenis kelamin harus diisi",
+          nama: "Please enter a valid gender"
+        },
+        nik: {
+          required: "No NIK harus diisi",
+          nama: "Please enter a valid nik"
+        },
+        email: {
+          required: "Alamat email harus diisi",
+          email: "Please enter a valid email address"
+        },
+        telepon: {
+          required: "Nomor telepon harus diisi",
+        },
+        terms: "Please accept our terms"
+      },
+      errorElement: 'span',
+      errorPlacement: function (error, element) {
+        error.addClass('invalid-feedback');
+        element.closest('.form-group').append(error);
+      },
+      highlight: function (element, errorClass, validClass) {
+        $(element).addClass('is-invalid');
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).removeClass('is-invalid');
+      }
+    });
+  });
+  </script>
+  <script>
+    function Logout() {
+        // Tampilkan SweetAlert konfirmasi logout
+        Swal.fire({
+    title: "Apakah Kamu ingin Logout?",
+    icon: "question",
+    showDenyButton: true,
+    confirmButtonText: "Lanjut Keluar",
+    denyButtonText: `Batalkan`
+  }).then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+    if (result.isConfirmed) {
+      setTimeout(function() {
+      window.location.href = 'index.html';
+    }, 500)
+    } else {
+    }
+  });
+    }
+  </script>
+  
+<!-- AdminLTE App -->
+</body>
+</html>
+

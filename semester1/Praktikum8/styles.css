@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  nav, header, main, article, aside, footer {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+  }
+  
+  nav {
+    background-color: palevioletred ;
+    color: black;
+    flex-direction: column  ;
+  }
+  
+  header {
+    background-color: bisque;
+    color: black;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+  }
+  
+  article {
+    flex: 2; 
+  }
+  
+  aside {
+    flex: 1;
+    background-color: skyblue;
+    color: black;
+  }
+  
+  footer {
+    background-color: bisque;
+    color: black;
+    align-self: flex-end; 
+  }
+  
